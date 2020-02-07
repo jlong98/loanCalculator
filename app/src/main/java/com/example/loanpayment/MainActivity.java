@@ -71,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
             double monthly;
             interest = interest / 100;
             interest = interest / 12;
+            if(total<down){
+                Toast.makeText(this,"Down payment cannot be more than the cost",Toast.LENGTH_LONG).show();
+            }
             if (leaseButton.isChecked()) {
                 if(total == 0 || interest == 0){
                     Toast.makeText(this,"Cost/APR cannot be 0",Toast.LENGTH_LONG).show();
